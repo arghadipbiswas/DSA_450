@@ -1,3 +1,8 @@
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+
 class Solution{
     public:
     //Function to find if there exists a triplet in the 
@@ -26,5 +31,20 @@ class Solution{
         }
         return false;
     }
-
 };
+
+int main()
+{
+	int T;
+	cin>>T;
+	while(T--)
+	{
+		int n,X;
+		cin>>n>>X;
+		int i,A[n];
+		for(i=0;i<n;i++)
+			cin>>A[i];
+		Solution ob;
+        cout <<  ob.find3Numbers(A, n, X) << endl;
+    }
+}
