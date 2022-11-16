@@ -23,7 +23,9 @@
 // hence the non-increasing sorted order is:
 // {15}, {7}, {5, 3, 9, 6}, {2, 4, 32}
 
-
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
 class Solution{
     public:
     void sortBySetBitCount(int arr[], int n)
@@ -47,6 +49,27 @@ class Solution{
         return cntA>cntB;
     }
 };
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int arr[n];
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+        }
+        Solution ob;
+        ob.sortBySetBitCount(arr, n);
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << " ";
+        cout << endl;
+    }
+    return 0;
+}
+
 
 
 

@@ -10,6 +10,12 @@
 // For i=3, P[i] = 10*3*5*2 = 300.
 // For i=4, P[i] = 10*3*5*6 = 900.
 
+//{ Driver Code Starts
+//Initial template for C++
+
+#include<bits/stdc++.h>
+using namespace std;
+
 
 class Solution{
   public:
@@ -35,3 +41,30 @@ class Solution{
         return v;
     }
 };
+
+//{ Driver Code Starts.
+int main()
+ {
+    int t;  // number of test cases
+    cin>>t;
+    while(t--)
+    {
+        int n;  // size of the array
+        cin>>n;
+        vector<long long int> arr(n),vec(n);
+        
+        for(int i=0;i<n;i++)    // input the array
+        {
+            cin>>arr[i];
+        }
+        Solution obj;
+        vec = obj.productExceptSelf(arr,n);   // function call
+        
+        for(int i=0;i<n;i++)    // print the output
+        {
+            cout << vec[i] << " ";
+        }
+        cout<<endl;
+    }
+	return 0;
+}
